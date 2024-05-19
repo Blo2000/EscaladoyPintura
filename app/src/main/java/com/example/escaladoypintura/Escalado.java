@@ -7,6 +7,7 @@ import android.widget.AutoCompleteTextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Escalado extends AppCompatActivity {
+    Number num;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,10 @@ public class Escalado extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, opciones);
         AutoCompleteTextView autoCompleteTextView = findViewById(R.id.desplegable);
         autoCompleteTextView.setAdapter(adapter);
+
+
+
+
 
     }
 }
