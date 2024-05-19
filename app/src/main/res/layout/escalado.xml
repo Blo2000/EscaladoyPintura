@@ -6,20 +6,6 @@
     android:layout_height="match_parent">
 
 
-    <AutoCompleteTextView
-        android:id="@+id/desplegable"
-        android:layout_width="137dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="135dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="552dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
     <EditText
         android:id="@+id/medida"
         android:layout_width="wrap_content"
@@ -44,12 +30,25 @@
         android:layout_marginTop="356dp"
         android:layout_marginEnd="129dp"
         android:layout_marginBottom="322dp"
-        android:text="Ejemplo"
         android:gravity="center"
+        android:text="Ejemplo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/desplegable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="601dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
