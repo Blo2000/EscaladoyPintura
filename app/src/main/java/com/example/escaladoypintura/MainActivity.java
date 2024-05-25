@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     Button bt2;
+    Button bt1;
 
 
     @Override
@@ -19,7 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        bt1 = findViewById(R.id.bt1);
         bt2 = findViewById(R.id.bt2);
+
+        bt1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent pintura = new Intent(MainActivity.this, Pintura.class);
+                MainActivity.this.startActivity(pintura);
+            }
+        });
 
         bt2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -27,5 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(escalar);
             }
         });
+
     }
 }
