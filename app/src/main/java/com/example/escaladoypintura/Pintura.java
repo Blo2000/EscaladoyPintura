@@ -27,7 +27,7 @@ public class Pintura extends AppCompatActivity{
     private EditText nombre;
     private Button bt1;
     private ArrayList<String> listaModelos = new ArrayList<>();
-    private ArrayAdapter<String> adptador;
+    private ArrayAdapter<String> adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,23 +41,47 @@ public class Pintura extends AppCompatActivity{
         dbHelper = new DbHelper(this);
         db = dbHelper.getWritableDatabase();
 
+        cargarDatosDesdeBD();
+        adaptador = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaModelos);
+        lista.setAdapter(adaptador);
+
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String titulo = nombre.getText().toString();
                 if (!titulo.isEmpty()) {
-                    /*ContentValues values = new ContentValues();
+                    listaModelos.add(titulo);
+                    adaptador.notifyDataSetChanged();
+                    nombre.getText().clear();
+
+
+                    ContentValues values = new ContentValues();
                     values.put("nombre", titulo);
                     db.insert(DbHelper.TABLA_PARTES, null, values);
-                    nombre.setText("");*/
-                    listaModelos.add(titulo);
-                    nombre.getText().clear();
-                    adptador = new ArrayAdapter<>(Pintura.this, android.R.layout.simple_list_item_1, listaModelos);
-                    lista.setAdapter(adptador);
                 }
             }
         });
     }
+    private void cargarDatosDesdeBD() {
+        Cursor cursor = db.query(
+                DbHelper.TABLA_PARTES,
+                new String[]{"nombre"},
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        if (cursor.moveToFirst()) {
+            do {
+                String nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"));
+                listaModelos.add(nombre);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+    }
+
 
     @Override
     protected void onDestroy() {

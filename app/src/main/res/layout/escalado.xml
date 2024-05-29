@@ -10,18 +10,16 @@
         android:id="@+id/resultado"
         android:layout_width="161dp"
         android:layout_height="53dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="129dp"
-        android:layout_marginBottom="322dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="354dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="324dp"
         android:gravity="center"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:textSize="25sp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/desplegable"
@@ -59,14 +57,30 @@
         android:layout_marginTop="241dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="455dp"
-        android:textSize="25sp"
         android:text="cm"
         android:textAlignment="center"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="281dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="331dp"
+        android:text="cm"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
