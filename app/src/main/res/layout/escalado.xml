@@ -39,15 +39,33 @@
         android:id="@+id/datos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="226dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="460dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="237dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="449dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="281dp"
+        android:layout_marginTop="241dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="455dp"
+        android:ems="10"
+        android:text="cm"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

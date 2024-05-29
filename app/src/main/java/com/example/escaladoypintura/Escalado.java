@@ -14,10 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class Escalado extends AppCompatActivity {
-    Number num;
+    private Number num;
     private Spinner desplegable;
-    TextView resultado;
-    EditText datos;
+    private TextView resultado;
+    private EditText datos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,7 @@ public class Escalado extends AppCompatActivity {
 
         // opciones del despelgable+
         ArrayList<String> opciones = new ArrayList<>();
+        opciones.add("Escala");
         opciones.add("1/72");
         opciones.add("1/76");
         opciones.add("1/48");

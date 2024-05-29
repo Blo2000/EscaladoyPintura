@@ -22,7 +22,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Escalado"/>
-        <activity android:name=".Pintura"/>
+        <activity android:name=".Pintura"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="Colores"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>
