@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -59,6 +59,15 @@ public class Pintura extends AppCompatActivity{
                     values.put("nombre", titulo);
                     db.insert(DbHelper.TABLA_PARTES, null, values);
                 }
+            }
+        });
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String nombreSelecionado = listaModelos.get(position);
+                Intent intent = new Intent(Pintura.this, Colores.class);
+                intent.putExtra("nombreModelo", nombreSelecionado);
+                startActivity(intent);
             }
         });
     }
