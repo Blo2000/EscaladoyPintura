@@ -6,47 +6,39 @@
     android:layout_height="match_parent"
     android:background="#55000000">
 
-    <EditText
-        android:id="@+id/nombreModelo"
+    <TextView
+        android:id="@+id/modelo_nom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="656dp"
-        android:hint="Nuevo modelo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="InvalidId" />
-
-    <Button
-        android:id="@+id/bt1"
-        android:layout_width="97dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="298dp"
-        android:layout_marginBottom="586dp"
-        android:text="Añadir modelo"
+        android:layout_height="47dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="683dp"
+        android:background="#B02727"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/lisModelo"
-        android:layout_width="307dp"
-        android:layout_height="468dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="113dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <EditText
+        android:id="@+id/colorUsados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minLines="1"
+        android:scrollbars="vertical"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/modelo_nom" />
 
     <ImageButton
         android:id="@+id/btvolver"
@@ -61,9 +53,9 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/flecha" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

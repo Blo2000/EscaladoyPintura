@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 
     <TextView
@@ -80,6 +81,40 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btvolver"
+        android:layout_width="96dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="627dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:background="#55000000"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flecha" />
+
+    <TextView
+        android:id="@+id/modelo_nom"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="683dp"
+        android:background="#B02727"
+        android:text="Escalar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

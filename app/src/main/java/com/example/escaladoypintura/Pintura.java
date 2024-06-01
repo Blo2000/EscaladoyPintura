@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 
@@ -28,6 +29,7 @@ public class Pintura extends AppCompatActivity{
     private Button bt1;
     private ArrayList<String> listaModelos = new ArrayList<>();
     private ArrayAdapter<String> adaptador;
+    private ImageButton volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +70,15 @@ public class Pintura extends AppCompatActivity{
                 Intent intent = new Intent(Pintura.this, Colores.class);
                 intent.putExtra("nombreModelo", nombreSelecionado);
                 startActivity(intent);
+            }
+        });
+
+        volver = findViewById(R.id.btvolver);
+
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
