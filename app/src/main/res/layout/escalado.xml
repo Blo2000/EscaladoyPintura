@@ -104,10 +104,11 @@
     <TextView
         android:id="@+id/modelo_nom"
         android:layout_width="match_parent"
-        android:layout_height="47dp"
+        android:layout_height="65dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="683dp"
         android:background="#B02727"
+        android:gravity="center"
         android:text="Escalar"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -116,6 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

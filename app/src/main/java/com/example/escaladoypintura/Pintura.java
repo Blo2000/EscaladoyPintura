@@ -26,10 +26,12 @@ public class Pintura extends AppCompatActivity{
     private SQLiteDatabase db;
     private ListView lista;
     private EditText nombre;
-    private Button bt1;
+    private ImageButton bt1;
     private ArrayList<String> listaModelos = new ArrayList<>();
     private ArrayAdapter<String> adaptador;
     private ImageButton volver;
+
+    private ImageButton eliminar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

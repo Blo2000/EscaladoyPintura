@@ -73,10 +73,10 @@
 
     <TextView
         android:id="@+id/modelo_nom"
+        android:layout_height="65dp"
         android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="683dp"
+        android:gravity="center"
+        android:layout_marginBottom="668dp"
         android:background="#B02727"
         android:text="Escalado y Pintura"
         android:textAlignment="center"
@@ -84,8 +84,7 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,21 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="InvalidId" />
 
-    <Button
-        android:id="@+id/bt1"
-        android:layout_width="97dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="298dp"
-        android:layout_marginBottom="586dp"
-        android:text="Añadir modelo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <ListView
         android:id="@+id/lisModelo"
@@ -66,4 +51,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/flecha" />
+
+    <ImageButton
+        android:id="@+id/bt1"
+        android:layout_width="62dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="596dp"
+        android:adjustViewBounds="true"
+        android:background="#55000000"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/suma" />
+
+    <ImageButton
+        android:id="@+id/bt"
+        android:layout_width="62dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="333dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="596dp"
+        android:adjustViewBounds="true"
+        android:background="#55000000"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/papelera" />
 </androidx.constraintlayout.widget.ConstraintLayout>
