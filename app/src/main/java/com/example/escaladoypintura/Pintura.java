@@ -33,6 +33,8 @@ public class Pintura extends AppCompatActivity{
 
     private ImageButton eliminar;
 
+    private int selectedItemIndex = -1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +77,15 @@ public class Pintura extends AppCompatActivity{
             }
         });
 
+        lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                selectedItemIndex = position;
+                view.setSelected(true);
+                return true;
+            }
+        });
+
         volver = findViewById(R.id.btvolver);
 
         volver.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +94,23 @@ public class Pintura extends AppCompatActivity{
                 finish();
             }
         });
+
+        eliminar = findViewById(R.id.bt2);
+
+        eliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedItemIndex != -1) {
+                    String nombreEliminar = listaModelos.get(selectedItemIndex);
+                    listaModelos.remove(selectedItemIndex);
+                    adaptador.notifyDataSetChanged();
+                    eliminarRegistro(nombreEliminar);
+                    selectedItemIndex = -1;
+                }
+            }
+        });
+
+
     }
     private void cargarDatosDesdeBD() {
         Cursor cursor = db.query(
@@ -103,7 +131,10 @@ public class Pintura extends AppCompatActivity{
         }
         cursor.close();
     }
-
+    private void eliminarRegistro(String nombre) {
+        db.delete(DbHelper.TABLA_PARTES, "nombre=?", new String[]{nombre});
+        db.delete(DbHelper.TABLA_COLORES, "parte_id = (SELECT id FROM " + DbHelper.TABLA_PARTES + " WHERE nombre=?)", new String[]{nombre});
+    }
 
     @Override
     protected void onDestroy() {

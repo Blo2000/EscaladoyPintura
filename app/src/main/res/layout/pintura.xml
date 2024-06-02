@@ -70,7 +70,7 @@
         app:srcCompat="@drawable/suma" />
 
     <ImageButton
-        android:id="@+id/bt"
+        android:id="@+id/bt2"
         android:layout_width="62dp"
         android:layout_height="54dp"
         android:layout_marginStart="333dp"
